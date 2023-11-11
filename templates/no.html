@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('img1.jpg') center/cover no-repeat fixed;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .result-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .name {
+            font-size: 24px;
+            margin: 10px 0;
+            
+        }
+        .gender {
+            font-size: 18px;
+        }
+        .emoji {
+            font-size: 80px;
+        }
+        .message {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .tips {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <div class="name"><p><b>Name : </b>{{ name }}</p></div>
+        <div class="gender"><p><b>Gender : </b>{{ gender }}</p></div>
+        <div class="emoji">&#127881;</div>
+        <div class="message">You are fit and healthy!</div>
+        <div class="tips">
+            <h1>Maintain a Healthy Lifestyle</h1>
+            <p>Here are a few tips to stay healthy:</p>
+            <ul>
+                <li>Eat a balanced diet rich in fruits and vegetables.</li>
+                <li>Exercise regularly to stay active.</li>
+                <li>Get enough sleep to recharge your body.</li>
+                <li>Stay hydrated by drinking plenty of water.</li>
+                <li>Manage stress through relaxation and meditation.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-image: url('/static/img1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+
+        .contain {
+            background-color: rgba(244, 243, 238, 0.849); 
+            height: 380px;
+            width: 350px;
+            border-radius: 20px;
+            display: flex;
+            margin: auto;
+            margin-top: 12%;
+            border: 5px;
+            box-shadow: 2px 2px 30px rgb(33, 32, 32);
+        }
+
+        .labels {
+            font-size: 25px;
+            color: rgb(6, 102, 245);
+            margin-bottom: -5px;
+            margin-top: 30px;
+            text-align: center;
+            margin-left: 50px;
+        }
+
+        .box {
+            height: 40px;
+            width: 280px;
+            border-radius: 20px;
+            margin-top: 30px;
+            padding-left: 10px;
+            margin-left: 10%;
+            background-color: rgb(234, 234, 234);
+            font-size: medium;
+        }
+
+        #button {
+            height: 30px;
+            width: 80px;
+            border-radius: 10px;
+            margin-top: 30px;
+            margin-left: 45%;
+            background-color: rgb(246, 243, 241);
+        }
+
+        #button:hover {
+            background-color: rgb(14, 159, 203);
+            color: white;
+            cursor: pointer;
+        }
+
+        #tx {
+            color: rgb(71, 71, 71);
+            margin-top: 30px;
+            margin-left: 30%;
+        }
+
+        #links-container {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        #create-account {
+            font-size: 17px;
+            margin-right: 10px;
+        }
+
+        #forget-password {
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <form class="form" method="POST">
+            <h1 class="labels">LOGIN</h1><br>
+            <input type="text" name="un" class="box" placeholder="Email"><br>
+            <input type="password" name="pw" class="box" placeholder="Password"><br>
+            <button id="button">Log in</button>
+            <p id="tx">Don't have an account? <a href="register.php" id="create-account">Create one</a></p><br>
+            <p id="links-container">
+                <a href="forgetpass.php" id="forget-password">Forgot password?</a>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

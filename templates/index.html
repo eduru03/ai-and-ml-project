@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-image: url('/static/img2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            height: 50px;
+            top:0;
+            width: 100%;
+            background-color: rgba(55, 191, 236, 0.884);
+            z-index: 1;
+        }
+        nav a {
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 24px;
+            color: rgb(24, 23, 23);
+            font-weight: 500;
+            
+        }
+        nav a:hover {
+            color: lightgray;
+        }
+        p{
+            font-size: 40px;
+            font-weight: 700;
+            margin-top: 50px; /* Adjust the margin-top as needed */
+        }
+        .con1,.con2{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 28%;
+        }
+        .text{
+            position: absolute;
+            top: 100px;
+            left:100px;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        p{
+            font-size: 20px;
+            font-size: 28px;
+            line-height: 1.5;
+            font-weight: 500;
+            color: rgb(31, 53, 90)
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="con1">
+            <h2 style="color: white;">DIABETES</h2>
+        </div>
+        <div class="con2">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="check.html">Check</a>
+        </div>
+    </nav>
+
+    <div class="text">
+        <p>Diabetes is all about insulin levels and sugar levels and what you put in your body.</p>
+    </div>
+    
+
+</body>
+</html>

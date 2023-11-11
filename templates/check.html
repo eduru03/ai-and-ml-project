@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Risk Assessment</title>
+    <style>
+        body {
+            background-image: url('/static/img3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: -1;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .column {
+            flex: 1;
+            margin: 10px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content: center;
+            padding: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        select, input {
+            margin-bottom: 10px;
+        }
+        #id1 {
+            -webkit-text-fill-color: white;
+            background-color: blue;
+            border-color: blue;
+            border-radius: 5px;
+            height: 40px;
+            width: 150px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 16px;
+            position: absolute;
+            left: 45%;
+        }
+        #id1:hover {
+            background-color: white;
+            -webkit-text-fill-color: blue;
+        }
+        .subcon{
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .main-col{
+            display:flex;
+            justify-content:space-between;
+            flex-wrap: wrap;
+           
+        }
+        .input{
+            width: 450px;
+            height: 33px;
+            border-radius: 5px;
+            border: 1px solid black;
+
+        }
+        .subcol{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            height: 50px;
+            top:0;
+            width: 100%;
+            background-color: rgba(55, 191, 236, 0.884);
+            z-index: 1;
+        }
+        nav a {
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 24px;
+            color: rgb(24, 23, 23);
+            font-weight: 500;
+            
+        }
+        nav a:hover {
+            color: lightgray;
+        }
+        .con1,.con2{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 28%;
+        }
+        @media screen and (max-width: 786px) {
+            .main-col{
+                margin-right: 10px;
+
+            }
+            .input{
+                width: 350px;
+                height: 30px;
+                border-radius: 5px;
+                border: 1px solid black;
+
+            }
+            .subcon h1{
+                font-size:28px;
+            }
+            #id1{
+                left: 40%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="con1">
+            <h2 style="color: white;">DIABETES</h2>
+        </div>
+        <div class="con2">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="check.html">Check</a>
+        </div>
+    </nav>
+    <form action="/predict" method="post">
+        <div class="container">
+            
+            <div class="subcon">
+                <h1>Diabetes Risk Assessment</h1>
+                <p>To check if you have diabetes or not, please enter your details:</p>
+            </div>
+            <div class="main-col">
+            <div class="column">
+                <div class="subcol">
+                <label for="fullname">Full Name:</label>
+                <input class="input" name="fn" type="text" id="fullname"  required placeholder="Enter your full name">
+                <label for="bloodpressure">Blood Pressure:</label>
+                <select class="input" name="a" id="bloodpressure">
+                    <option value="0">High</option>
+                    <option value="1">Normal</option>
+                </select>
+                <label for="cholesterol">Cholesterol Level:</label>
+                <select class="input" name="b" id="cholesterol">
+                    <option value="0">High</option>
+                    <option value="1">Normal</option>
+                </select>
+                <label for="cholesterolcheck">Cholesterol Check:</label>
+                <select class="input" name="c" id="cholesterolcheck">
+                    <option value="0">Yes</option>
+                    <option value="1">No</option>
+                </select>
+                <label for="bmi">BMI:</label>
+                <input class="input" name="d" type="number" id="bmi" placeholder="Enter your BMI ratio" required>
+                <label for="smoker">Smoker:</label>
+                <select class="input" name="e" id="smoker">
+                    <option value="0">Yes</option>
+                    <option value="1">No</option>
+                </select>
+                <label for="stroke">Stroke:</label>
+                <select class="input" name="f" id="stroke">
+                    <option value="0">Yes</option>
+                    <option value="1">No</option>
+                </select>
+                <label for="heartdiseases">Heart Diseases:</label>
+                <select class="input" name="g" id="heartdiseases">
+                    <option value="0">Yes</option>
+                    <option value="1">No</option>
+                </select>
+                <label for="physicalactivities">Physical Activities:</label>
+                <select class="input" name="h" id="physicalactivities">
+                    <option value="0">Yes</option>
+                    <option value="1">No</option>
+                </select>
+                <label for="fruits">Fruits:</label>
+                <select class="input" name="i" id="fruits">
+                    <option value="0">Yes</option>
+                    <option value="1">No</option>
+                </select>
+                <label for="veggies">Veggies:</label>
+                <select class="input" name="j" id="veggies">
+                    <option value="0">Yes</option>
+                    <option value="1">No</option>
+                </select>
+                
+            </div>
+        </div>
+            <div class="column">
+                <div class="subcol">
+                
+                <label for="alcoholic">Alcoholic:</label>
+                <select class="input" name="k" id="alcoholic">
+                    <option value="0">Yes</option>
+                    <option value="1">No</option>
+                </select>
+                <label for="healthcare">Healthcare:</label>
+                <select class="input" name="l" id="healthcare">
+                    <option value="0">Yes</option>
+                    <option value="1">No</option>
+                </select>
+                <label for="nodobbcost">NoDobbcCost:</label>
+                <select class="input" name="m" id="nodobbcost">
+                    <option value="0">Yes</option>
+                    <option value="1">No</option>
+                </select>
+                <label for="generalhealth">General Health:</label>
+                <select class="input" name="n" id="generalhealth">
+                    <option value="1">Very Bad</option>
+                    <option value="2">Bad</option>
+                    <option value="3">Normal</option>
+                    <option value="4">Good</option>
+                    <option value="5">Healthy</option>
+                </select>
+                <label for="mentalhealth">Mental Health Issues:</label>
+                <input class="input" name="o" type="number" id="mentalhealth" placeholder="Select between 0-30" required>
+                <label for="physicalhealth">Physical Health:</label>
+                <input class="input" name="p" type="number" id="physicalhealth" placeholder="Select between 0-30" required>
+                <label for="walkinghabit">Walking Habit:</label>
+                <select class="input" name="q" id="walkinghabit">
+                    <option value="1">No</option>
+                    <option value="0">Yes</option>
+                </select>
+                <label for="sex">Sex:</label>
+                <select class="input" name="r" id="sex">
+                    <option value="0">Male</option>
+                    <option value="1">Female</option>
+                </select>
+                <label for="age">Age:</label>
+                <input class="input" name="s" type="number" id="age" placeholder="Enter your age" required>
+                <label for="education">Education:</label>
+                <input class="input" name="t" type="number" id="education" placeholder="Select up to 6" required>
+                <label for="income">Income:</label>
+                <input class="input" name="u" type="number" id="income" placeholder="Select up to 8" required>
+            </div>
+        </div>
+        </div>
+        </div>
+        <button id="id1" value="submit" type="submit">Predict</button>
+    </form>
+</body>
+</html>

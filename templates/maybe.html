@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Diabetic Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('your-background-image.jpg') center/cover no-repeat fixed;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .result-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .name {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .gender {
+            font-size: 18px;
+        }
+        .emoji {
+            font-size: 80px;
+        }
+        .message {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .precautions {
+            font-size: 18px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <div class="name"><p><b>Name : </b>{{ name }}</p></div>
+        <div class="gender"><p><b>Gender : </b>{{ gender }}</p></div>
+        <div class="emoji">&#128561;</div>
+        <div class="message">You are pre-diabetic.</div>
+        <div class="precautions">
+            <h1>Precautions to Maintain Your Health</h1>
+            <p>Here are some precautions to manage your pre-diabetic condition:</p>
+            <ul>
+                <li>Adopt a balanced diet with controlled carbohydrates and sugars.</li>
+                <li>Engage in regular physical activity, such as brisk walking or cycling.</li>
+                <li>Monitor your blood sugar levels regularly.</li>
+                <li>Avoid sugary and high-calorie foods and drinks.</li>
+                <li>Consult a healthcare professional for guidance and follow their advice.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

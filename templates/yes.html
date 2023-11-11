@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetic Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('your-background-image.jpg') center/cover no-repeat fixed;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .result-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .name {
+            font-size: 24px;
+            margin: 10px 0;
+            display: flex;
+            flex-direction: row;
+        }
+        .gender {
+            font-size: 18px;
+            display: flex;
+            flex-direction: row;
+        }
+        .emoji {
+            font-size: 80px;
+            color: red; /* Change the color here */
+        }
+        .message {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .tips {
+            font-size: 18px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <div class="name"><p><b>Name : </b>{{ name }}</p></div>
+        <div class="gender"><p><b>Gender : </b>{{ gender }}</p></div>
+        <div class="emoji">&#9888;</div> <!-- Danger emoji in red -->
+        <div class="message">You are diabetic. Please take precautions.</div>
+        <div class="tips">
+            <h1>Tips to Manage Diabetes</h1>
+            <p>Here are some tips to manage your diabetes:</p>
+            <ul>
+                <li>Follow a balanced diet with controlled carbohydrates and sugars.</li>
+                <li>Monitor your blood sugar levels regularly and take medication as prescribed.</li>
+                <li>Engage in regular physical activity, such as walking or swimming.</li>
+                <li>Limit alcohol consumption and avoid smoking.</li>
+                <li>Consult your healthcare provider and follow their guidance for managing diabetes.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
